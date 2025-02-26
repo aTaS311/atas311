@@ -1,0 +1,15 @@
+import numpy as np
+a = 1.0  
+b = 3.5  
+x_values = np.arange(2, 6.5, 0.5)  # 6.5 yazmağımızın səbəbi 6-nı daxil etməkdir
+results = []
+for x in x_values:
+    if np.isclose(x, b):  
+        z = 2.1 * x**2 + 2 * a * b
+    elif x > b: 
+        z = 3 * a - 2 * b * x
+    else:  
+        z = 4 * b + 6 * a * x
+    results.append((x, z))
+for x, z in results:
+    print(f"x = {x:.1f}, z = {z:.4f}")
